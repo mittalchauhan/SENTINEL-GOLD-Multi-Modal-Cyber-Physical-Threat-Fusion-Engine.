@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data & Temp (CRITICAL)
+/C:/tmp/                      # Don't try to upload local absolute paths
+business_stream.jsonl        # This is your "database," don't upload live data
+business_analytics.csv
+summary.md
+spark_kafka_checkpoints/
+spark_fusion_checkpoints/
+
+# Environments
+.venv/
+env/
