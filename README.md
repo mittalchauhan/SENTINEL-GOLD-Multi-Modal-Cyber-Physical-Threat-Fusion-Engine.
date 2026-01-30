@@ -7,7 +7,15 @@
 
 Sentinel Gold is an advanced security orchestration platform that synchronizes digital threat intelligence with physical surveillance. It utilizes a **fused-risk model** to automate emergency responses and generate AI-driven executive summaries.
 
+## Use Case & Impact
+**Why Sentinel Gold?** Modern security teams are overwhelmed by disconnected alerts. Sentinel Gold solves this by **Cyber-Physical Fusion:** it correlates digital phishing attempts with physical presence (CCTV).
 
+**Scenario:** A high-risk phishing link is clicked inside the office. Sentinel automatically checks CCTV for unauthorized persons at that workstation and triggers a LOCKDOWN if the risk score crosses the threshold.
+
+## 🛡️ Strategic Impact & Cybersecurity Use Case
+* **Cyber-Physical Correlation:** Automatically correlates digital indicators (phishing URLs) with physical telemetry (CCTV human presence).
+* **Autonomous Response:** Uses Reinforcement Learning logic to trigger `EMERGENCY-LOCKDOWN` protocols without human latency.
+* **AI-Driven Governance:** Leverages LLMs (GPT-2) to instantly convert complex technical telemetry into "Executive Summaries," bridging the gap between engineering and management.
 
 ## System Architecture
 The system operates across four layers:
@@ -28,6 +36,15 @@ The system calculates advanced statistical states:
 - **Entropy (H):** Measures the randomness of incoming threat vectors.
 - **Z-Score (σ):** Identifies statistical anomalies in threat intensity.
 - **Fused Score:** Weighted average (60% Cyber / 40% Physical)[cite: 2].
+
+## Core Technical Capabilities & Implementation
+**Big Data (Kafka)	Scalable Ingestion:** Handles high-velocity threat feeds via a distributed message broker.
+**Big Data (PySpark)	Real-time Processing:** Uses Spark Structured Streaming for low-latency data transformation.
+**Fusion Engine	Multi-Modal Correlation:** Merges digital risk (URLs) with physical risk (CCTV) into a unified vector.
+**Computer Vision	Human Detection:** Uses OpenCV (HOG) to inject real-world physical telemetry into the pipeline.
+**Reinforcement Learning	Autonomous Logic:** Implements a reward-based logic gate to select mitigation actions (Lockdown vs Alert).
+**LLM (GPT-2)	AI Auditing:** Automatically synthesizes complex security logs into readable executive summaries.
+**DevOps	Lifecycle Management:** Automated process termination and environment cleanup via stop_all.bat.
 
 ## Screenshots
 ### Executive Dashboard
@@ -60,8 +77,11 @@ python spark_kafka.py
 # Start ML Fusion Engine
 python ml_pipeline.py
 
-# Start AI/RL Decision Layer
+# Start AI/RL Decision 
 python rl_llm.py
+
+# Start business analytics 
+python business.py
 
 # Launch Executive Dashboard
 streamlit run app.py
