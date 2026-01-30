@@ -9,38 +9,38 @@ Sentinel Gold is an advanced security orchestration platform that synchronizes d
 
 
 
-## 🚀 System Architecture
+## System Architecture
 The system operates across four layers:
-1. [cite_start]**Ingestion Layer (`spark_kafka.py`):** Real-time scraping of threat feeds (e.g., OpenPhish) pushed via Apache Kafka[cite: 1].
-2. [cite_start]**Fusion Engine (`ml_pipeline.py`):** Combines digital indicators with live CCTV human detection (OpenCV) using PySpark Structured Streaming[cite: 2].
+1. **Ingestion Layer (`spark_kafka.py`):** Real-time scraping of threat feeds (e.g., OpenPhish) pushed via Apache Kafka[cite: 1].
+2. **Fusion Engine (`ml_pipeline.py`):** Combines digital indicators with live CCTV human detection (OpenCV) using PySpark Structured Streaming[cite: 2].
 3. **Intelligence Layer (`rl_llm.py`):** A Reinforcement Learning-inspired logic gate that triggers actions, followed by GPT-2 generated incident summaries.
 4. **Executive Suite (`app.py` & `business.py`):** A high-end Streamlit dashboard providing heuristic nodes, entropy tracking, and automated business reports.
 
-## 🛠️ Tech Stack
-* [cite_start]**Data Processing:** Apache Spark, Kafka, PySpark[cite: 1, 2].
-* [cite_start]**Computer Vision:** OpenCV (HOG Descriptors)[cite: 2].
+## Tech Stack
+***Data Processing:** Apache Spark, Kafka, PySpark[cite: 1, 2].
+* **Computer Vision:** OpenCV (HOG Descriptors)[cite: 2].
 * **AI/NLP:** HuggingFace Transformers (GPT-2).
 * **Dashboard:** Streamlit, Plotly, Pandas.
 * **Backend:** Python, Windows Batch (Automation).
 
-## 📊 Heuristic Metrics
+## Heuristic Metrics
 The system calculates advanced statistical states:
 - **Entropy (H):** Measures the randomness of incoming threat vectors.
 - **Z-Score (σ):** Identifies statistical anomalies in threat intensity.
-- [cite_start]**Fused Score:** Weighted average (60% Cyber / 40% Physical)[cite: 2].
+- **Fused Score:** Weighted average (60% Cyber / 40% Physical)[cite: 2].
 
-## 📸 Screenshots
+## Screenshots
 ### Executive Dashboard
 | **Executive Dashboard (Gold UI)** | **Audit Log & Heuristics** |
 | :---: | :---: |
-| <img src="assets/sentinel_executive_dashboard.png" width="450" /> | <img src="assets/audit_log_and_heuristics.jpg" width="450" /> |
+| <img src="assets/sentinel_executive_dashboard.png" width="450" /> | <img src="assets/audit_log_and_heuristics.png" width="450" /> |
 
 ### Real-Time Pipeline
 | **Live Fusion Monitoring (CCTV + Terminal)** |
 | :---: |
-| <img src="assets/live_fusion_monitoring.jpg" width="600" /> |
+| <img src="assets/live_fusion_monitoring.png" width="600" /> |
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 ### 1. Requirements
 Ensure **Apache Kafka** is running on `localhost:29092`.
